@@ -1,0 +1,24 @@
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\bin\Debug\net5.0\Emarket.Core.Domain.deps.json
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\bin\Debug\net5.0\Emarket.Core.Domain.dll
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\bin\Debug\net5.0\ref\Emarket.Core.Domain.dll
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\bin\Debug\net5.0\Emarket.Core.Domain.pdb
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.csproj.AssemblyReference.cache
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.AssemblyInfo.cs
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.dll
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\obj\Debug\net5.0\ref\Emarket.Core.Domain.dll
+C:\Users\Franklyn\source\repos\Proyecto MVC .NET CORE\Emarket\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.pdb
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\bin\Debug\net5.0\Emarket.Core.Domain.deps.json
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\bin\Debug\net5.0\Emarket.Core.Domain.dll
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\bin\Debug\net5.0\ref\Emarket.Core.Domain.dll
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\bin\Debug\net5.0\Emarket.Core.Domain.pdb
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.csproj.AssemblyReference.cache
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.AssemblyInfo.cs
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.dll
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\obj\Debug\net5.0\ref\Emarket.Core.Domain.dll
+C:\Users\Franklyn\Downloads\Emarket-main\Emarket-main\Emarket.Domain\obj\Debug\net5.0\Emarket.Core.Domain.pdb

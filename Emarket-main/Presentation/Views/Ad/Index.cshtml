@@ -1,0 +1,49 @@
+﻿@using Emarket.Core.Application.ViewModels.Ad;
+@model  List<AdsVM>;
+@{
+    ViewData["Title"] = "Mis anuncios";
+
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <h3 class="mt-4 mb-4 ps-2">Mis anuncios</h3>
+        </div>
+        <div class="text-end col-8 mt-4 pe-2 mb-4">
+            <a asp-controller="Ad" asp-action="SaveAdVM" type="button" class="btn btn-outline-primary btn-sm">
+                Agregar nuevo anuncio
+            </a>
+        </div>
+    </div>
+    @if (Model.Count == 0)
+    {
+        <h2 class="modal-title">No has creado ningun anuncio!!!</h2>
+        <p class="text-body">Si desea crear algun anuncio pulse en el boton de "Agregar nuevo anuncio"!</p>
+    }
+    else
+    {
+        <div class="card-group m-1 row mt-3">
+            @foreach(var item in Model)
+            {
+                <div class="col-md-4 mx-auto">
+                    <div class="card mb-3 bg-transparent border-1 border-dark" style="width: 21rem;">
+                        <img src="@item.Urls[0]" class="card-img img-fluid card-img-top" style="height:200px;object-fit:unset;"  alt="@item.Name">
+                        <div class="card-body bg-transparent text-dark">
+                            <h5 class="card-title">@item.Name  - @item.CategoryName</h5>
+                            <p class="card-text">@item.Description</p>
+                            <div class=" row gap-2 d-md-flex">
+                                <div class="text-md-start col-5">
+                                    <p class="btn btn-sm border  border-2 border-dark">Precio: @item.Price$</p>
+                                </div>
+                                <div class="text-end col-6">
+                                    <a asp-controller="Ad" asp-action="EditAdVM" asp-route-id="@item.Id" type="button" class="btn btn-warning btn-sm">Editar</a>
+                                    <a asp-controller="Ad" asp-action="DeleteAdVM" asp-route-id="@item.Id" type="button" class="btn btn-danger btn-sm">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    </div>

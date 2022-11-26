@@ -1,0 +1,59 @@
+﻿@using Emarket.Core.Application.ViewModels.User;
+@model SaveUserVM;
+@{ 
+    ViewData["Title"] = "Registrase";
+}
+<div class="container-fluid ">
+    <div class="card bg-transparent" style="height:475px; width:auto;">
+        <div class="card card-header border-1">
+            <h2 class="text-xl-center">Crear cuenta</h2>
+        </div>
+        <div class="card-body card bg-transparent border-0">
+            <form method="post" asp-controller="User" asp-action="Register" class="row g-3">
+                <div class="col-5 offset-1">
+                    <label asp-for="FirstName" class="form-label">Nombre</label>
+                    <input asp-for="FirstName" class="form-control" id="FirstName" placeholder="Roberto">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="col-5 offset-1">
+                    <label asp-for="LastName" class="form-label">Apellido</label>
+                    <input asp-for="LastName" class="form-control" placeholder="Gabiria">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="col-4">
+                    <label asp-for="Username" class="form-label">Nombre de usuario</label>
+                    <input asp-for="Username" class="form-control" placeholder="Robertico">
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                    @if (Model.validateUser)
+                    {
+                        <span>@Html.ValidationSummary(false, "", new { @class = "text-danger" })</span>
+                    }
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Email" class="form-label">Correo Electronico</label>
+                    <input asp-for="Email" class="form-control" placeholder="robertoGabiria@gmail.com">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Phone" class="form-label">Telefono</label>
+                    <input type="tel" asp-for="Phone" class="form-control" placeholder="809-432-8908">
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="col-md-5 offset-1">
+                    <label asp-for="Password" class="form-label">Contraseña</label>
+                    <input asp-for="Password" class="form-control">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="col-md-5 offset-1 ">
+                    <label asp-for="ConfirmPassword" class="form-label">Confirmar contraseña</label>
+                    <input asp-for="ConfirmPassword" class="form-control">
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 offset-9 mt-md-2">
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                    <a asp-controller="User" asp-action="Login" type="button" class="btn btn-success">Ir a logearse</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

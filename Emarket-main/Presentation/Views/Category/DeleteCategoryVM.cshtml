@@ -1,0 +1,20 @@
+﻿@using Emarket.Core.Application.ViewModels.Categories;
+@model SaveCategoryVM;
+@{
+        ViewData["Title"] = "Eliminar categoria";
+
+}
+<div class="container-fluid">
+    <div class="card w-50 mx-auto mt-5">
+        <div class="card-header bg-info ">
+            <h5 class="card-title fs-5 text-dark">Deseas eliminar la categoria @Model.Name?</h5>
+        </div>
+        <div class="card-body mx-auto">
+            <form method="post" asp-controller="Category" asp-action="DeleteCategoryVMPost" class="text-center">
+                <input type="hidden" asp-for="Id"/>
+                <button type="submit" class="btn btn-danger mx-auto">Eliminar</button>
+                <a asp-controller="Category" asp-action="Index" class="btn btn-warning mx-auto">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

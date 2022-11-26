@@ -1,0 +1,66 @@
+﻿@using Emarket.Core.Application.ViewModels.Ad;
+@model AdsVM;
+@{
+    ViewData["Title"] = "Detalles del Producto";
+}
+
+<div class="container-fluid">
+    <div class="card mt-5" style="max-width: 1540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        @for (int i = 0; i < Model.Urls.Count; i++)
+                        {
+                            @if (Model.Urls[i] != null)
+                            {
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="@i" class="active" aria-current="true" aria-label="Slide @i"></button>
+                            }
+                        }
+                    </div>
+                    <div class="carousel-inner">
+                        @foreach (var item in Model.Urls)
+                        {
+                            if (item != null)
+                            {
+                                <div class="carousel-item active">
+                                    <img src="@item" class="img-fluid" style="height:auto; width:375px;" alt="@Model.Name">
+                                </div>
+                            }
+
+                        }
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Name - @Model.CategoryName</h5>
+                    <p class="card-text">
+                        @Model.Description
+                    </p>
+                    <p class="card-text"><small class="text-muted">Este articulo fue publicado por @Model.CreatedBy, el dia @Model.Creadted.Day/@Model.Creadted.Month/@Model.Creadted.Year</small></p>
+                    <p class="card-text"><small class="text-muted">Para mas informacion puedes llamar al @Model.Phone o escribir al correo de @Model.Email </small></p>
+                    <div class=" d-flex justify-content-between">
+                        <div class="row>
+                            <div class="col-2">
+                                <p class="btn btn-sm border border-2 border-dark">Precio: @Model.Price$</p>
+                            </div>
+                            <div class="col-2">
+                                <a type="button" class="btn btn-sm btn-warning " asp-controller="Home" asp-action="Index">Volver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

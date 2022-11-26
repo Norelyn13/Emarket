@@ -1,0 +1,68 @@
+﻿@using Emarket.Core.Application.ViewModels.Ad;
+@using Emarket.Core.Application.ViewModels.Categories;
+@model List<AdsVM>;
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+
+<div class="container-fluid">
+    <form method="post" asp-controller="Home" asp-action="Index">
+        <div class="d-flex m-1">
+            <div class="input-group ">
+                <input name="keyword" type="text" class="form-control" placeholder="Escriba lo que desea..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Seleccionar por categorias
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li class="dropdown-item">
+                        <input class="form-check-input" value="0" type="checkbox" name="categoryId" id="category" />
+                        <label class="form-check-label" for="category">Todas</label>
+                    </li>
+                    @foreach (CategoryVM item in ViewBag.categories)
+                    {
+                        <li class="dropdown-item">
+                            <input class="form-check-input" value="@item.Id" type="checkbox" name="categoryId" id="category_@item.Id" />
+                            <label class="form-check-label" for="category_@item.Id">@item.Name</label>
+                        </li>
+                    }
+                </ul>
+                <button class="btn btn-primary" type="submit" id="button-addon2">Buscar</button>
+            </div>
+        </div>
+    </form>
+    @if (Model.Count != 0 || Model == null)
+    {
+        <h3 class="mt-4 mb-4 ps-2">Lo mas comprado por la comunidad</h3>
+        <div class=" m-1 row mt-3">
+            @foreach (var item in Model)
+            {
+                <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id" type="button" class="text-decoration-none col-3 mx-auto">
+                    <div class="card mb-3 bg-transparent border-2 border-dark">
+                        <img src="@item.Urls[0]" class="card-img-top" style="height:180px; width:auto;" alt="@item.Name">
+                        <div class="card-body border-2 border-dark bg-transparent text-dark">
+                            <h5 class="card-title">@item.Name  -   @item.CategoryName</h5>
+                            <p class="card-text">@item.Description</p>
+                            <div class="d-flex justify-content-end">
+                                <button href"#" class="btn border-1 border-dark btn-sm text-dark">Precio: @item.Price</button>
+                            </div>
+                            @if (item.LastUpdate != null)
+                            {
+                                <p class="card-text"><small class="text-muted">Last updated @item.LastUpdate</small></p>
+                            }
+                        </div>
+                    </div>
+                </a>
+            }
+        </div> }
+    else
+    {
+        <div class="mx-auto mt-3 text-center">
+            <h4 class="modal-title">Upss, Nadie ha publicado nada todavia...</h4>
+            <p class="text-body">
+                Recuerda aqui podras ver todo los anuncios que los demas usuarios publiquen, los tuyos se encuentra en el apartado
+                de Mis anuncios.
+            </p>
+        </div>
+    }
+</div>

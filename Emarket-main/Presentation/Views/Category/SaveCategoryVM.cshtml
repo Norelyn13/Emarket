@@ -1,0 +1,48 @@
+﻿@using Emarket.Core.Application.ViewModels.Categories;
+@model SaveCategoryVM;
+@{
+    bool AddMode = Model.Id == 0 ? true : false;
+    if(!AddMode)
+    {
+        ViewData["Title"] = "Editar categoria";
+
+    }
+    else
+    {
+        ViewData["Title"] = "Agregar una nueva categoria";
+
+    }
+}
+<div class="container-fluid ">
+    <div class="card bg-transparent" style="height:400px; width:auto;">
+        <div class="card card-header border-1">
+            <h2 class="text-xl-center">@(AddMode  ? "Agregar nueva categoria":$"Editar la categoria{Model.Name}") </h2>
+        </div>
+        <div class="card-body card bg-transparent border-0 mx-auto">
+            <form method="post" asp-controller="Category" asp-action="@(AddMode ? "SaveCategoryVM":"EditCategoryVM")" class="row g-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="mb-3 col-9 offset-1 text-center">
+                            <label for="FirstName" class="form-label">Nombre de la categoria</label>
+                            <input asp-for="Name" value="@Model.Name" type="text" class="form-control" id="FirstName" placeholder="Manzana">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3 col-9 offset-1 text-center">
+                            <label for="descripcion" class="form-label">Descripcion</label>
+                            <textarea asp-for="Description" value="@Model.Description" type="text" class="form-control " style="resize: none; height:100px;" id="descripcion" placeholder="Escribe algo relaciona con tu producto aqui..."></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="d-flex justify-content-center gap-3">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            <a asp-controller="Category" asp-action="Index" type="button" class="btn btn-warning">Volver</a>
+                        </div>
+                    </div>
+                </div>              
+            </form>
+        </div>
+    </div>
+</div>
+@*
+    
+//41;15
+*@
